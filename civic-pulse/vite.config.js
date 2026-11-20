@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Civic-Pulse/',
+ base: process.env.GITHUB_ACTIONS ? '/civic-pulse-3-languages-updated/' : '/',
 })
