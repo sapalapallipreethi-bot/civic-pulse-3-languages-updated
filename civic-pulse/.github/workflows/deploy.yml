@@ -24,15 +24,17 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        working-directory: ./civic-pulse
         run: npm install
 
       - name: Build project
+        working-directory: ./civic-pulse
         run: npm run build
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./civic-pulse/dist
 
   deploy:
     needs: build
