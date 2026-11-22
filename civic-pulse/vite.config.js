@@ -3,5 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/civic-pulse-3-languages-updated/',
+  base: process.env.VERCEL
+    ? '/'
+    : '/civic-pulse-3-languages-updated/',
 })
